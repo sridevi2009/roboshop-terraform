@@ -20,7 +20,6 @@ resource "aws_ssm_parameter" "private_subnet_ids" {
     value = join(",", module.roboshop.private_subnet_ids)
 }
 
-
 resource "aws_ssm_parameter" "database_subnet_ids" {
     name = "/${var.project_name}/${var.environment}/database_subnet_ids"
     type = "StringList"
